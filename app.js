@@ -219,17 +219,249 @@ Nhập một câu, đếm số từ và ký tự trong câu đó
 // timSoNguyenTo(7);
 
 // Hiển thị dãy Fibonacci bất kỳ
-function getFi(number) {
-    if (number == 1) {
-        console.log("1")
-    } else {
-        for (let i = 1; i < number; i++) {
-            let a = number - i;
-            let b = number - (i - 1);
-            console.log(a, b)
-        }
+// function getFi(number) {
+//     let fib = [];
+
+//     fib[0] = 0;
+//     fib[1] = 1;
+//     for (let i = 2; i <= number; i++) {
+//         fib[i] = fib[i - 2] + fib[i - 1];
+//         console.log(fib[i]);
+//     }
+// }
+// getFi(5)
+
+//Tinh giai thua 1 so nguyen duong bat ky
+// function tinhGiaiThua(n) {
+//     let firstnum = 1;
+//     for (let i = 1; i <= n; i++) {
+//         firstnum *= i;
+//     }
+//     console.log(firstnum);
+// };
+// tinhGiaiThua(3);
+
+/*
+Vẽ tam giác sao
+******
+****
+***
+**
+*
+*/
+// function veTamGiac(n) {
+//         for (let i = 1; i <= n; i++) {
+//             let result = '';
+//             for (let j = n; j >= 1; j--) {
+//                 if (i <= j) {
+//                     result += '*'
+//                 } else {
+//                     result += ' ';
+//                 }
+//             }
+//             console.log(result);
+//         }
+// }
+// veTamGiac(6)
+
+//#############################################################
+// function getFunc(arr) {
+//     let max = Math.max.apply(null, arr);
+//     let min = Math.min.apply(null, arr);
+//     console.log('Max: ' + max + ', Min: ' + min);
+//     let ascendArr = arr.sort((a, b) => { return (a - b) });
+//     console.log('Tang dan: ' + ascendArr);
+//     let decendArr = arr.sort((c, d) => { return (d - c) });
+//     console.log('Giam dan: ' + decendArr);
+//     let mf = 1;
+//     let m = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i; j < arr.length; j++) {
+//             if (arr[i] === arr[j]) {
+//                 m++;
+//             };
+//             if (mf < m) {
+//                 mf = m;
+//                 item = arr[i];
+//             }
+//         }
+//         m = 0;
+//     }
+//     console.log('Item ' +item + ' xuat hien ' + mf)
+// }
+// getFunc([1, 3, 5, 3])
+
+/*
+Nhập và hiển thị một ma trận có kích thước là 5x5, trong đó: các phần tử trên đường chéo 
+được điền giá trị 0, các phần tử của tam giác dưới đường chéo được điền các giá trị -1, 
+và ở tam giác trên là được điền với các giá trị 1.
+*/
+// let matrix = [];
+// function getMatrix(H) {
+//     for (let y = 0; y < H; y++) {
+//         matrix[y] = [];
+//         for (let x = 0; x < H; x++) {
+//             if (x == y) {
+//                 matrix[y][x] = "0"
+//             } else if (x > y ) {
+//                 matrix[y][x] = "1"
+//             } else {
+//                 matrix[y][x] = "-1"
+//             }
+//         }
+//     }
+//     console.log(matrix.join('\n'));
+// }
+// getMatrix(5)
+
+/*
+Tính tổng mỗi hàng, mỗi cột của một ma trận có kích cỡ n: row x m: ceil, 
+và nếu là ma trận vuông thì tính tổng đường chéo
+// */
+// let matrix = [];
+// function getMatrix(n, m) {
+
+// }
+// getMatrix()
+
+/*
+Sử dụng khái niệm truyền mảng tới hàm để tính giá trị trung bình của các giá trị nguyên được nhập từ bàn phím. 
+Các giá trị nguyên được lưu trữ trong mảng một chiều và được truyền tới hàm có tên là avg.
+*/
+// function avgFunc(arr) {
+//     let result = 0;
+//     for (item of arr) {
+//         result += item;
+//     };
+//     console.log(result/arr.length);
+// }
+// avgFunc([1,3,4,2])
+
+/*
+cộng hai phân số và hiển thị kết quả. Chương trình của bạn sẽ nhắc người dùng nhập phân số 1 và phân số 2. 
+Tử số và mẫu số được nhập một cách riêng rẽ bởi khoảng trống, như dưới đây:
+Nhap phan so 1 (tuso mauso): 1 2
+Nhap phan so 2 (tuso mauso): 2 5
+Ket qua: 9/10
+*/
+// function getCount(a, a1, b ,b1) {
+//     let x1 = a/a1;
+//     let x2 = b/b1;
+//     let x = x1 + x2;
+//     console.log(x)
+// }
+// getCount(1,2,1,2)
+
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// rl.question('What do you think of Node.js? ', (answer) => {
+//   // TODO: Log the answer in a database
+//   console.log(`Thank you for your valuable feedback: ${answer}`);
+
+//   rl.close();
+// });
+
+/*
+Nhập một số ngày nào đó, sau đó chuyển đổi thành số năm và tuần tương ứng và in kết quả
+*/
+// const readline = require('readline');
+// function tinhDate() {
+//     const rl = readline.createInterface({
+//         input: process.stdin,
+//         output: process.stdout
+//     });
+
+//     rl.question('Type number of days: ', (songay) => {
+//         let sonam = songay / 365;
+//         let sotuan = sonam * (4*12); 
+//         console.log(`So ngay: ${songay}, So nam: ${sonam}, So tuan: ${sotuan}`);
+
+//         rl.close();
+//     });
+// }
+// tinhDate()
+
+const readline = require('readline');
+
+// class sinhvien {
+//     mssv;
+//     tensv;
+//     sex;
+//     diemkt1;
+//     diemkt2;
+//     diemcc;
+//     diemgk;
+//     diemck;
+//     tongdiem
+// }
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+let students = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }];
+
+console.log("\n1. Them ban ghi sinh vien\n" + "2. Xoa ban ghi sinh vien\n" + "3. Cap nhat ban ghi sinh vien\n" + "4. Quan sat tat ca ban ghi sinh vien\n" + "5. Tinh diem trung binh cua mot sinh vien da chon\n" + "6. Hien thi sinh vien co tong diem cao nhat\n" + "7. Hien thi sinh vien co tong diem thap nhat\n" + "8. Tim sinh vien boi ID\n" + "9. Sap xep cac ban ghi boi tong diem thi cua sinh vien\n");
+rl.question('Choose your option: ', (answer) => {
+    // TODO: Log the answer in a database
+    console.log(`Your choice: ${answer}`);
+    if (answer == 1) return addInfo()
+    else if (answer == 2) return deleteInfo()
+    else if (answer == 3) return updateInfo()
+    else if (answer == 4) return viewAllInfo()
+    else if (answer == 5) return countAgv()
+    else if (answer == 6) return viewBest()
+    else if (answer == 7) return viewLowestfo()
+    else if (answer == 8) return findId()
+    else if (answer == 9) return sortInfo();
+});
+
+function addInfo() {
+    const r2 = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    do {
+        
     }
+    while {
+
+    };
+    r2.question('Type new information: ', (item) => {
+        console.log(`Add: ${item}`);
+        students.push(item);
+        console.log(students)
+        r2.close();
+        rl.close();
+    });
 
 }
-
-getFi(0)
+function updateInfo() {
+    console.log('A');
+    rl.close();
+}
+function viewAllInfo() {
+    console.log('A');
+    rl.close();
+}
+function countAgv() {
+    console.log('A');
+    rl.close();
+}
+function viewBest() {
+    console.log('A');
+    rl.close();
+}
+function findId() {
+    console.log('A');
+    rl.close();
+}
+function sortInfo() {
+    console.log('A');
+    rl.close();
+}
