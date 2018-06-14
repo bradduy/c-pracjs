@@ -386,82 +386,390 @@ Nhập một số ngày nào đó, sau đó chuyển đổi thành số năm và
 // }
 // tinhDate()
 
-const readline = require('readline');
+// const readline = require('readline');
 
-// class sinhvien {
-//     mssv;
-//     tensv;
-//     sex;
-//     diemkt1;
-//     diemkt2;
-//     diemcc;
-//     diemgk;
-//     diemck;
-//     tongdiem
+// // class sinhvien {
+// //     mssv;
+// //     tensv;
+// //     sex;
+// //     diemkt1;
+// //     diemkt2;
+// //     diemcc;
+// //     diemgk;
+// //     diemck;
+// //     tongdiem
+// // }
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+// let students = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }];
+
+// console.log("\n1. Them ban ghi sinh vien\n" + "2. Xoa ban ghi sinh vien\n" + "3. Cap nhat ban ghi sinh vien\n" + "4. Quan sat tat ca ban ghi sinh vien\n" + "5. Tinh diem trung binh cua mot sinh vien da chon\n" + "6. Hien thi sinh vien co tong diem cao nhat\n" + "7. Hien thi sinh vien co tong diem thap nhat\n" + "8. Tim sinh vien boi ID\n" + "9. Sap xep cac ban ghi boi tong diem thi cua sinh vien\n");
+// rl.question('Choose your option: ', (answer) => {
+//     // TODO: Log the answer in a database
+//     console.log(`Your choice: ${answer}`);
+//     if (answer == 1) return addInfo()
+//     else if (answer == 2) return deleteInfo()
+//     else if (answer == 3) return updateInfo()
+//     else if (answer == 4) return viewAllInfo()
+//     else if (answer == 5) return countAgv()
+//     else if (answer == 6) return viewBest()
+//     else if (answer == 7) return viewLowestfo()
+//     else if (answer == 8) return findId()
+//     else if (answer == 9) return sortInfo();
+// // });
+
+// // /*
+// // yes lam tiep
+// no thi dung
+
+// if(yes)
+// if (no)
+
+// let ketqua = true
+// while(ketqua){ //ketqua true
+//     user input student
+
+//     ///add input zo mang
+//     //tao obj stu
+//     //add zo mang
+//     //console.log mang
+
+//     co muon lam tiep ko (y/n)
+//     ketqua = inputketqua == 'y' ? true : false
 // }
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-let students = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }];
+// //thoat
 
-console.log("\n1. Them ban ghi sinh vien\n" + "2. Xoa ban ghi sinh vien\n" + "3. Cap nhat ban ghi sinh vien\n" + "4. Quan sat tat ca ban ghi sinh vien\n" + "5. Tinh diem trung binh cua mot sinh vien da chon\n" + "6. Hien thi sinh vien co tong diem cao nhat\n" + "7. Hien thi sinh vien co tong diem thap nhat\n" + "8. Tim sinh vien boi ID\n" + "9. Sap xep cac ban ghi boi tong diem thi cua sinh vien\n");
-rl.question('Choose your option: ', (answer) => {
-    // TODO: Log the answer in a database
-    console.log(`Your choice: ${answer}`);
-    if (answer == 1) return addInfo()
-    else if (answer == 2) return deleteInfo()
-    else if (answer == 3) return updateInfo()
-    else if (answer == 4) return viewAllInfo()
-    else if (answer == 5) return countAgv()
-    else if (answer == 6) return viewBest()
-    else if (answer == 7) return viewLowestfo()
-    else if (answer == 8) return findId()
-    else if (answer == 9) return sortInfo();
-});
 
-function addInfo() {
-    const r2 = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-    do {
-        
+// //getUserInputAndAddToArray
+// ...
+// ..         hoiketthuc
+//                y: getUserInputAndAddtoArray
+//                n: exit
+
+
+//hoiKetthuc
+
+
+// */
+
+// function getUserInputAndAddToArray() {
+
+//     const r1 = readline.createInterface({
+//         input: process.stdin,
+//         output: process.stdout
+//     });
+
+//     r1.question('Type new information: ', (usrInput) => {
+//         console.log(`Add: ${usrInput}`);
+//         let numberid = Number(usrInput)
+//         console.log(typeof numberid)
+//         let obj = { id: numberid, name: 'abc' };
+//         students.push(obj);
+//         console.log(students);
+
+//         const hint = 'Want to continue???(y/n)'
+//         flowByCondition(hint, (kq) => kq == "y" ? true: false, getUserInputAndAddToArray, (kq) => {r1.close(), console.log("finish")})
+//         // r2.question('Want to add more???(y/n)', (ketthuc) => {
+//         //     console.log(ketthuc)
+//         //     ketthuc = ketthuc == 'n' ? true : false
+//         //     if (ketthuc) {
+//         //         r2.close();
+//         //     }
+//         //     else {
+//         //         getUserInputAndAddToArray()
+//         //     }
+//         // })
+//     })
+// }
+
+// function addInfo() {
+//     getUserInputAndAddToArray();
+// }
+
+
+// //func ask if we want to exit the current situation, if yes, call cb, if no close
+// function flowByCondition(hint, onCompare, onContinue, onExit ){
+//     const r2 = readline.createInterface({
+//         input: process.stdin,
+//         output: process.stdout
+//     });
+//     r2.question(hint, (ketthuc) => {
+//         console.log(ketthuc)
+//         if (onCompare(ketthuc)) {
+//             onContinue(ketthuc)
+
+//         }
+//         else {
+//             r2.close()
+//             onExit(ketthuc)
+//         }
+//     })
+// }
+
+// function deleteInfo() {
+//     const r2 = readline.createInterface({
+//         input: process.stdin,
+//         output: process.stdout
+//     });
+//     r2.question('Type delete id: ', (id) => {
+//         console.log(`Delete: ${id}`);
+//         let removeIndex = students.map((item) => { return item.id }).indexOf(id);
+//         students.splice(removeIndex, 1);
+//         console.log(students)
+//         r2.close();
+//         rl.close();
+//     });
+// }
+
+// function updateInfo() {
+//     const r4 = readline.createInterface({
+//         input: process.stdin,
+//         output: process.stdout
+//     });
+//     r4.question('Type update information: ', (itemUpdate) => {
+//         // console.log(`Update: ${itemUpdate}`);
+//         students.name = `${itemUpdate}`
+//         r4.close();
+//         rl.close();
+//     });
+// }
+// function viewAllInfo() {
+//     console.log('A');
+//     rl.close();
+// }
+// function countAgv() {
+//     console.log('A');
+//     rl.close();
+// }
+// function viewBest() {
+//     console.log('A');
+//     rl.close();
+// }
+// function findId() {
+//     console.log('A');
+//     rl.close();
+// }
+// function sortInfo() {
+//     console.log('A');
+//     rl.close();
+// }
+
+// function f(arr){
+//     let max= arr[0]; 
+//     for (let i = 1; i < arr.length; i++) {
+
+//          if (arr[i] >max) {
+//             max = arr[i]
+//             } 
+//         else {
+
+//         }
+//     }
+//     return max  
+// } 
+
+// [1,2,5,3]
+
+/*
+max = 1
+For 1: i = 1, i < 4 ; arr[i] = 2, vo if max = arr[i] = 2;
+for 2: i = 2, i < 4 ; arr[i] = 5, vo if max = arr[i] = 5;
+for 3: i = 3, i <4 ; arr[i] = 3, vo else ko lam gi;
+for 4: i = 4 ,i  = 4 thoat for
+return max 5
+*/
+
+
+// function u(arr){
+//     let min= arr[0]; 
+//     for (let i = 1; i < arr.length; i++) {
+
+//          if (arr[i] < min) {
+//             min = arr[i]
+//             } 
+//         else {
+
+//         }
+//     }
+//     return min  
+// } 
+
+
+// let svList = [
+//     {
+//         id: 1,
+//         name: "A",
+//         diem: {
+//             toan: 10,
+//             van: 5,
+//             anh: 3
+//         }
+//     },
+//     {
+//         id: 2,
+//         name: "B",
+//         diem: {
+//             toan: 3,
+//             van: 3,
+//             anh: 3
+//         }
+//     },
+//     {
+//         id: 3,
+//         name: "C",
+//         diem: {
+//             toan: 10,
+//             van: 10,
+//             anh: 10
+//         }
+//     }
+// ];
+
+// function maxScore(arr, n) {
+//     for (let item of arr) {
+//         if ((n == item.diem.toan) || (n == item.diem.van) || (n == item.diem.anh)) {
+//             console.log(item.name);
+//         } else {
+//             console.log('----')
+//         }
+//     }
+// }
+
+// maxScore(svList, 5);
+
+/*
+  - tinh diem trung binh cua sv 0
+  - max = diem trung binh 0
+  - svMax = sinh vien 0
+duyet mang sinh vien from 1
+  tinh diem trung binh cua sv hien tai
+  if diem trung binh cua sv hien tai > max
+     svMax = svHientai
+     max = diem trung binh cua sv hien tai
+  
+return svMax     
+
+*/
+
+// function findBest(arr) {
+//    let max = (arr[0].diem.toan + arr[0].diem.van + arr[0].diem.anh) /3
+//     let svMax = arr[0];
+    
+//     for (let i = 1; i < arr.length; i++) {
+//         let avgScoreCurrent = (arr[i].diem.toan + arr[i].diem.van + arr[i].diem.anh) /3;
+//         if ( avgScoreCurrent > max) {
+//             svMax = arr[i];
+//             max = avgScoreCurrent;
+//         }
+//     }
+//     return svMax;
+// }
+
+// console.log(findBest(svList))
+/*
+[6,3,2,10,4]
+max = arrNumber[0] = 6; a = 0
+for lan 1: i = 1; arrNumber[1]= 3; vo else: ko lam gi; max = arrNumber[1] = 6; a = 0
+for lan 2: i = 2; arrNumber[2]= 2; vo else: ko lam gi; max = arrNumber[2] = 6; a = 0
+for lan 3: i = 3; arrNumber[3]= 10; vo if: max = arrNumber[3] = 10; a = 3
+for lan 4: i = 4; arrNumber[4]= 4; vo else: ko lam gi; max = arrNumber[4] = 10; a = 3
+return arr[3]
+*/
+/*
+cho 1 mang cac sv: moi sv co prop la id, ten, diem: toan, van, anh
+viet 1 ham nhan vo mang sv va diem  . tra ra nhung sv nao co diem van hoac toan hoac anh bang voi diem nhap vo
+viet 1 ham nhan vo mang sv va tra ra sv co diem TB 3 mon cao nhat
+viet 1 ham tim kiem sv theo dieu kien duoc dinh nghia
+*/
+/*
+
+*/
+
+function filterSv(arr, func) {
+    let result = [];
+    for (let item of arr) {
+        let r = func(item);
+        if (!r) {
+            console.log('Do nothing')
+        } else {
+            result.push(item)
+        }
     }
-    while {
+    return result;
+}
 
-    };
-    r2.question('Type new information: ', (item) => {
-        console.log(`Add: ${item}`);
-        students.push(item);
-        console.log(students)
-        r2.close();
-        rl.close();
-    });
+console.log(filterSv(svList, (x) => { return ((x.diem.toan + x.diem.van + x.diem.anh) /3) == 10 }))
+/*
+result = [];
+for lan 1: i
+*/
 
-}
-function updateInfo() {
-    console.log('A');
-    rl.close();
-}
-function viewAllInfo() {
-    console.log('A');
-    rl.close();
-}
-function countAgv() {
-    console.log('A');
-    rl.close();
-}
-function viewBest() {
-    console.log('A');
-    rl.close();
-}
-function findId() {
-    console.log('A');
-    rl.close();
-}
-function sortInfo() {
-    console.log('A');
-    rl.close();
-}
+
+/*
+vu tru ABC co 5 he mat troi,
+he mat troi A gom cac hanh tinh [A1, B1, C1, D1, E1]
+he mat troi B gom cac hanh tinh AB, BB, CB, DB, EB
+he mat troi C gom cac hanh tinh A3, C3, D3, E3
+he mat troi D gom cac hanh tinh A4, B4, C4, D4, E4
+he mat troi E gom cac hanh tinh AE, BE, CE
+
+1. in ra man hinh thong tin cua vu tru ABC voi dinh dang sau:
+Vu tru <ten vu tru> gom:
+<so thu tu tang dan>. he mat troi <ten he mat troi>: <hanh tinh 1>, <hanh tinh 2>...
+ex: 
+Vu tru 123 gom:
+1. he mat troi 345: hanh tinh qwe, hanh tinh 456, hanh tinh 123
+2. he mat troi 765: hanh tinh tre, hanh tinh 653
+...
+
+2. Moi hanh tinh deu co dan so nhu sau:
+A1: 1000
+B1: 2000
+C1: 1500
+D1: 1700
+E1: 2050
+
+AB: 1500
+BB: 2050
+CB: 1550
+DB: 1700
+EB: 2050
+
+A3: 1000
+C3: 1500
+D3: 1700
+E3: 2050
+
+A4: 1000
+B4: 2000
+C4: 1500
+D4: 1700
+E4: 2050
+
+AE: 1000
+BE: 2000
+CE: 1500
+
+In ra man hinh hanh tinh co dan so dong nhat va it nhat cua moi he mat troi
+
+3. cac hanh tinh co the di den nhau theo ban do nhu sau:
+A1 -> B1: 10   (A1 co the di den B1 voi do dai la 10)
+A1 -> BB: 10
+B1 -> AB: 15
+C1 -> BB: 20
+D1 -> E1: 30
+BB -> C3: 15
+AB -> A3: 20
+BB -> B4: 30
+C3 -> B4: 20
+B4 -> AE: 10
+AE -> BE: 5
+BE -> CE: 10
+Tim duong di co do dai ngan nhat tu A1 -> AE va in ra cac duong phai di
+ex: A1 -> AE: <do dai> phai di qua cac hanh tinh A1 -> ... -> ....-> AE
+
+*/
